@@ -26,6 +26,7 @@ function RegisterAuthForm(props) {
           name="email"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
+          placeholder="email"
         />
         {formik.errors.email && <p>{formik.errors.email}</p>}
         <input
@@ -33,6 +34,7 @@ function RegisterAuthForm(props) {
           name="password"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
+          placeholder="password"
         />
         {formik.errors.password && <p>{formik.errors.password}</p>}
         <button type="submit">Register</button>
