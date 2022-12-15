@@ -3,7 +3,7 @@ import { useAuthCtx } from '../../store/AuthContext';
 import css from './Header.module.css';
 
 function Header(props) {
-  const { userLoggedIn } = useAuthCtx();
+  const { userLoggedIn, logout } = useAuthCtx();
   return (
     <header className={css.header}>
       <Link to="/">Logo</Link>
@@ -55,6 +55,7 @@ function Header(props) {
               </NavLink>
             </li>
           )}
+          {userLoggedIn && <button onClick={logout}>Logout</button>}
         </ul>
       </nav>
     </header>

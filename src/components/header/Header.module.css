@@ -7,8 +7,12 @@
 }
 .header ul {
   display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
+}
+.header button {
+  margin-left: 20px;
 }
 .navLink {
   margin: 0 5px;
