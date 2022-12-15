@@ -1,6 +1,6 @@
 function RegisterPage(props) {
   return (
-    <div>
+    <div className="container">
       <h2>RegisterPage</h2>
     </div>
   );

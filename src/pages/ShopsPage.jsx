@@ -1,6 +1,6 @@
 function ShopsPage(props) {
   return (
-    <div>
+    <div className="container">
       <h2>ShopsPage</h2>
     </div>
   );

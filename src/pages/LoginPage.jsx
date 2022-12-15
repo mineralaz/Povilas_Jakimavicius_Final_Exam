@@ -1,6 +1,6 @@
 function LoginPage(props) {
   return (
-    <div>
+    <div className="container">
       <h2>LoginPage</h2>
     </div>
   );
