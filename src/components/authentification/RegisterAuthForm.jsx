@@ -1,9 +1,11 @@
 import { useFormik } from 'formik';
 import { toast } from 'react-hot-toast';
+import { useHistory } from 'react-router-dom';
 import * as Yup from 'yup';
 import { sendPostRequest } from '../helpers';
 
 function RegisterAuthForm(props) {
+  const history = useHistory();
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -23,6 +25,7 @@ function RegisterAuthForm(props) {
 
       console.log('response ===', response);
       console.log('error ===', error);
+      history.push('/login');
     },
   });
   return (
