@@ -8,10 +8,10 @@ function LoginAuthForm(props) {
       password: '',
     },
     validationSchema: Yup.object().shape({
-      email: Yup.string().email().required(),
+      email: Yup.string().email().required('required field'),
       password: Yup.string()
         .min(6, 'Too short. Min length 6 symbols')
-        .required(),
+        .required('required field'),
     }),
     onSubmit: (values) => {
       console.log('values ===', values);
@@ -28,7 +28,9 @@ function LoginAuthForm(props) {
           onBlur={formik.handleBlur}
           placeholder="email"
         />
-        {formik.errors.email && <p>{formik.errors.email}</p>}
+        {formik.touched.email && formik.errors.email && (
+          <p>{formik.errors.email}</p>
+        )}
         <input
           type="password"
           name="password"
@@ -36,7 +38,9 @@ function LoginAuthForm(props) {
           onBlur={formik.handleBlur}
           placeholder="password"
         />
-        {formik.errors.password && <p>{formik.errors.password}</p>}
+        {formik.touched.password && formik.errors.password && (
+          <p>{formik.errors.password}</p>
+        )}
         <button type="submit">Register</button>
       </form>
     </div>
