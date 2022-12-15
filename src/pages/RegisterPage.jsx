@@ -1,4 +1,4 @@
-import RegisterAuthForm from '../components/authentication/RegisterAuthForm';
+import RegisterAuthForm from '../components/authentification/RegisterAuthForm';
 
 function RegisterPage(props) {
   return (

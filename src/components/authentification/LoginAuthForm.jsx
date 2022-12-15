@@ -1,7 +1,7 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-function RegisterAuthForm(props) {
+function LoginAuthForm(props) {
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -19,7 +19,7 @@ function RegisterAuthForm(props) {
   });
   return (
     <div>
-      <h2>Register</h2>
+      <h2>Login</h2>
       <form onSubmit={formik.handleSubmit}>
         <input
           type="email"
@@ -40,4 +40,4 @@ function RegisterAuthForm(props) {
     </div>
   );
 }
-export default RegisterAuthForm;
+export default LoginAuthForm;
