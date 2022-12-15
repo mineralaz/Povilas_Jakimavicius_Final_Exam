@@ -16,7 +16,6 @@ function RegisterAuthForm(props) {
         .required('required field'),
     }),
     onSubmit: async (values) => {
-      console.log('values ===', values);
       const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${
         import.meta.env.VITE_API_KEY
       }`;

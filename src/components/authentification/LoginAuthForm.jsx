@@ -1,5 +1,6 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { sendPostRequest } from '../helpers';
 
 function LoginAuthForm(props) {
   const formik = useFormik({
@@ -13,8 +14,13 @@ function LoginAuthForm(props) {
         .min(6, 'Too short. Min length 6 symbols')
         .required('required field'),
     }),
-    onSubmit: (values) => {
-      console.log('values ===', values);
+    onSubmit: async (values) => {
+      const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${
+        import.meta.env.VITE_API_KEY
+      }`;
+      const [response, error] = await sendPostRequest(values, url);
+      console.log('response ===', response);
+      console.log('error ===', error);
     },
   });
   return (
@@ -41,7 +47,7 @@ function LoginAuthForm(props) {
         {formik.touched.password && formik.errors.password && (
           <p>{formik.errors.password}</p>
         )}
-        <button type="submit">Register</button>
+        <button type="submit">Login</button>
       </form>
     </div>
   );
