@@ -1,7 +1,9 @@
+import RegisterAuthForm from '../components/authentication/RegisterAuthForm';
+
 function RegisterPage(props) {
   return (
     <div className="container">
-      <h2>RegisterPage</h2>
+      <RegisterAuthForm />
     </div>
   );
 }
