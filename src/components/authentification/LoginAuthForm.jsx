@@ -2,9 +2,11 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useAuthCtx } from '../../store/AuthContext';
 import { sendPostRequest } from '../helpers';
+import { useHistory } from 'react-router-dom';
 
 function LoginAuthForm(props) {
   const ctx = useAuthCtx();
+  const history = useHistory();
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -24,6 +26,7 @@ function LoginAuthForm(props) {
       console.log('response ===', response);
       console.log('error ===', error);
       ctx.login(response.idToken);
+      history.push('/');
     },
   });
   return (
