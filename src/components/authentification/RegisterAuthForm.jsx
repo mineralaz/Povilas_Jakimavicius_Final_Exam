@@ -1,5 +1,7 @@
 import { useFormik } from 'formik';
+import { toast } from 'react-hot-toast';
 import * as Yup from 'yup';
+import { sendPostRequest } from '../helpers';
 
 function RegisterAuthForm(props) {
   const formik = useFormik({
@@ -13,8 +15,15 @@ function RegisterAuthForm(props) {
         .min(6, 'Too short. Min length 6 symbols')
         .required('required field'),
     }),
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log('values ===', values);
+      const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${
+        import.meta.env.VITE_API_KEY
+      }`;
+      const [response, error] = await sendPostRequest(values, url);
+
+      console.log('response ===', response);
+      console.log('error ===', error);
     },
   });
   return (
