@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function NotAuthorisedPage(props) {
   return (
-    <div>
+    <div className="container">
       <h2>For registered or logged in users only</h2>
       <p>
         Register <Link to="/register">Here</Link>

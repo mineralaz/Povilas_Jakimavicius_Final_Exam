@@ -6,18 +6,19 @@ import ShopsPage from './pages/ShopsPage';
 import AddShopPage from './pages/AddShopPage';
 import './App.css';
 import Header from './components/header/Header';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Switch>
-        <Route path="/add-shop">
+        <ProtectedRoute path="/add-shop">
           <AddShopPage />
-        </Route>
-        <Route path="/shops">
+        </ProtectedRoute>
+        <ProtectedRoute path="/shops">
           <ShopsPage />
-        </Route>
+        </ProtectedRoute>
         <Route path="/register">
           <RegisterPage />
         </Route>
