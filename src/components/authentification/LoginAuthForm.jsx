@@ -1,8 +1,10 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { useAuthCtx } from '../../store/AuthContext';
 import { sendPostRequest } from '../helpers';
 
 function LoginAuthForm(props) {
+  const ctx = useAuthCtx();
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -21,6 +23,7 @@ function LoginAuthForm(props) {
       const [response, error] = await sendPostRequest(values, url);
       console.log('response ===', response);
       console.log('error ===', error);
+      ctx.login(response.idToken);
     },
   });
   return (
