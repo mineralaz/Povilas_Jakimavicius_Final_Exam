@@ -1,7 +1,7 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useAuthCtx } from '../../store/AuthContext';
-import { sendPostRequest } from '../helpers';
+import { notification, sendPostRequest } from '../helpers';
 import { useHistory } from 'react-router-dom';
 import Input from '../UI/Input';
 
@@ -24,15 +24,15 @@ function LoginAuthForm(props) {
         import.meta.env.VITE_API_KEY
       }`;
       const [response, error] = await sendPostRequest(values, url);
-      console.log('response ===', response);
-      console.log('error ===', error);
+      if (error) return notification(error.error.message);
+
       ctx.login(response.idToken);
+      notification('Login success');
       history.push('/');
     },
   });
   return (
     <div>
-      <h2>Login</h2>
       <form onSubmit={formik.handleSubmit}>
         <Input
           type="email"

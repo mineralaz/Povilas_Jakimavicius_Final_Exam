@@ -1,7 +1,7 @@
 import { useFormik } from 'formik';
 import { useHistory } from 'react-router-dom';
 import * as Yup from 'yup';
-import { sendPostRequest } from '../helpers';
+import { notification, sendPostRequest } from '../helpers';
 import Input from '../UI/Input';
 
 function RegisterAuthForm(props) {
@@ -23,14 +23,14 @@ function RegisterAuthForm(props) {
       }`;
       const [response, error] = await sendPostRequest(values, url);
 
-      console.log('response ===', response);
-      console.log('error ===', error);
+      if (error) return notification(error.error.message);
+
+      notification('Regitered succesfully');
       history.push('/login');
     },
   });
   return (
     <div>
-      <h2>Register</h2>
       <form onSubmit={formik.handleSubmit}>
         <Input
           type="email"
