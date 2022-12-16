@@ -1,6 +1,7 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { sendPostRequest } from '../helpers';
+import Input from '../UI/Input';
 
 function AddShopForm(props) {
   const formik = useFormik({
@@ -42,61 +43,57 @@ function AddShopForm(props) {
     <div>
       <h2>Add Shop</h2>
       <form onSubmit={formik.handleSubmit}>
-        <input
+        <Input
           type="text"
           name="shopName"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.shopName}
           placeholder="Shop name"
+          touched={formik.touched.shopName}
+          error={formik.errors.shopName}
         />
-        {formik.touched.shopName && formik.errors.shopName && (
-          <p>{formik.errors.shopName}</p>
-        )}
-        <input
+        <Input
           type="text"
           name="town"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.town}
           placeholder="Town"
+          touched={formik.touched.town}
+          error={formik.errors.town}
         />
-        {formik.touched.town && formik.errors.town && (
-          <p>{formik.errors.town}</p>
-        )}
-        <input
+        <Input
           type="year"
           name="startYear"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.startYear}
           placeholder="Start Year"
+          touched={formik.touched.startYear}
+          error={formik.errors.startYear}
         />
-        {formik.touched.startYear && formik.errors.startYear && (
-          <p>{formik.errors.startYear}</p>
-        )}
-        <textarea
+        <Input
+          textarea
           type="text"
           name="description"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.description}
           placeholder="Description..."
-        ></textarea>
-        {formik.touched.description && formik.errors.description && (
-          <p>{formik.errors.description}</p>
-        )}
-        <input
+          touched={formik.touched.description}
+          error={formik.errors.description}
+        />
+        <Input
           type="text"
           name="imageUrl"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.imageUrl}
           placeholder="Image url"
+          touched={formik.touched.imageUrl}
+          error={formik.errors.imageUrl}
         />
-        {formik.touched.imageUrl && formik.errors.imageUrl && (
-          <p>{formik.errors.imageUrl}</p>
-        )}
         <button type="submit">Add Shop</button>
       </form>
     </div>

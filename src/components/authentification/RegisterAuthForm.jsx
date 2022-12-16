@@ -2,6 +2,7 @@ import { useFormik } from 'formik';
 import { useHistory } from 'react-router-dom';
 import * as Yup from 'yup';
 import { sendPostRequest } from '../helpers';
+import Input from '../UI/Input';
 
 function RegisterAuthForm(props) {
   const history = useHistory();
@@ -31,28 +32,24 @@ function RegisterAuthForm(props) {
     <div>
       <h2>Register</h2>
       <form onSubmit={formik.handleSubmit}>
-        <input
+        <Input
           type="email"
           name="email"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values.email}
           placeholder="email"
+          touched={formik.touched.email}
+          error={formik.errors.email}
         />
-        {formik.touched.email && formik.errors.email && (
-          <p>{formik.errors.email}</p>
-        )}
-        <input
+        <Input
           type="password"
           name="password"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values.password}
           placeholder="password"
+          touched={formik.touched.password}
+          error={formik.errors.password}
         />
-        {formik.touched.password && formik.errors.password && (
-          <p>{formik.errors.password}</p>
-        )}
         <button type="submit">Register</button>
       </form>
     </div>

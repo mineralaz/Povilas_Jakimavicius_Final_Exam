@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 import { useAuthCtx } from '../../store/AuthContext';
 import { sendPostRequest } from '../helpers';
 import { useHistory } from 'react-router-dom';
+import Input from '../UI/Input';
 
 function LoginAuthForm(props) {
   const ctx = useAuthCtx();
@@ -33,26 +34,24 @@ function LoginAuthForm(props) {
     <div>
       <h2>Login</h2>
       <form onSubmit={formik.handleSubmit}>
-        <input
+        <Input
           type="email"
           name="email"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           placeholder="email"
+          touched={formik.touched.email}
+          error={formik.errors.email}
         />
-        {formik.touched.email && formik.errors.email && (
-          <p>{formik.errors.email}</p>
-        )}
-        <input
+        <Input
           type="password"
           name="password"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           placeholder="password"
+          touched={formik.touched.password}
+          error={formik.errors.password}
         />
-        {formik.touched.password && formik.errors.password && (
-          <p>{formik.errors.password}</p>
-        )}
         <button type="submit">Login</button>
       </form>
     </div>
