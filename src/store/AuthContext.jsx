@@ -6,7 +6,9 @@ import { useHistory } from 'react-router-dom';
 export const AuthContext = createContext({
   login(token) {},
   logout() {},
+  loadingFn() {},
   userLoggedIn: false,
+  loading: false,
 });
 
 AuthContext.displayName = 'Auth-context';
@@ -16,6 +18,7 @@ function AuthContextProvider(props) {
   const tokenFromLocalStorage = localStorage.getItem('token');
 
   const [tokenFromLogin, setTokenFromLogin] = useState(tokenFromLocalStorage);
+  const [loading, setLoading] = useState(false);
 
   const userLoggedIn = !!tokenFromLogin;
 
@@ -28,10 +31,15 @@ function AuthContextProvider(props) {
     setTokenFromLogin('');
     history.push('/');
   };
+  const loadingFn = (to) => {
+    setLoading(to);
+  };
   const contextValue = {
     login,
     logout,
+    loadingFn,
     userLoggedIn,
+    loading,
   };
   return (
     <AuthContext.Provider value={contextValue}>
