@@ -1,0 +1,37 @@
+.shop {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: snow;
+}
+.shop__img {
+  width: 300px;
+  height: 200px;
+  align-self: center;
+}
+.shop__name {
+  font-size: 2rem;
+}
+.shop__desc {
+}
+.shop__town {
+}
+.shop__year {
+}
+@media screen and (min-width: 426px) {
+  .shop__img {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 726px) {
+  .shopList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .shopList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -2,6 +2,7 @@ import { useAuthCtx } from '../../store/AuthContext';
 import { shopsObjectsObjToArr } from '../helpers';
 import useFetch from '../hooks/UseFetch';
 import SingleShop from '../shops/SingleShop';
+import css from './AllShops.module.css';
 
 function AllShops(props) {
   const { loading } = useAuthCtx();
@@ -14,7 +15,7 @@ function AllShops(props) {
       {shopsArr.length < 1 && <h3>There are no shops yet</h3>}
       {shopsArr.length > 0 && loading && <p>Loading...</p>}
       {shopsArr.length > 0 && !loading && (
-        <ul>
+        <ul className={css.shopList}>
           {shopsArr.map((shopObj) => (
             <SingleShop key={shopObj.id} obj={shopObj} />
           ))}

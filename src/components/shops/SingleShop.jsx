@@ -1,12 +1,14 @@
+import css from './SingleShop.module.css';
+
 function SingleShop(props) {
   const { description, imageUrl, shopName, startYear, town } = props.obj;
   return (
-    <li>
-      <img src={imageUrl} alt={shopName} />
-      <h2>{shopName}</h2>
-      <p>{description}</p>
-      <p>{town}</p>
-      <p>Since {startYear}</p>
+    <li className={css.shop}>
+      <img className={css.shop__img} src={imageUrl} alt={shopName} />
+      <h2 className={css.shop__name}>{shopName}</h2>
+      <p className={css.shop__desc}>{description}</p>
+      <p className={css.shop__town}>{town}</p>
+      <p className={css.shop__year}>Since {startYear}</p>
     </li>
   );
 }
