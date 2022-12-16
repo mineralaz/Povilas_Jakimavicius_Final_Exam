@@ -64,7 +64,7 @@ function AddShopForm(props) {
           error={formik.errors.town}
         />
         <Input
-          type="year"
+          type="number"
           name="startYear"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}

@@ -7,5 +7,6 @@ export const failNotify = (message) =>
   });
 export const successNotify = (message) =>
   toast(message, {
+    duration: 2000,
     className: css.success,
   });
