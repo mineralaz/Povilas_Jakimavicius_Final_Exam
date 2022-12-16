@@ -5,6 +5,7 @@ import { sendPostRequest } from '../helpers';
 import { useHistory } from 'react-router-dom';
 import Input from '../UI/Input';
 import { failNotify, successNotify } from '../toasts/toasts';
+import css from './LoginAuthForm.module.css';
 
 function LoginAuthForm(props) {
   const ctx = useAuthCtx();
@@ -33,7 +34,7 @@ function LoginAuthForm(props) {
     },
   });
   return (
-    <div>
+    <div className={css.loginForm}>
       <h2>Login</h2>
       <form onSubmit={formik.handleSubmit}>
         <Input

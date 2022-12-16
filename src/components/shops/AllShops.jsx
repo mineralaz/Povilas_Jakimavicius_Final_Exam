@@ -9,19 +9,19 @@ function AllShops(props) {
   const url = `${import.meta.env.VITE_REAL_DB_URL}/shops.json`;
   const [shopsData, setShopsData] = useFetch(url, {});
   const shopsArr = shopsObjectsObjToArr(shopsData);
-
   return (
     <>
-      {shopsArr.length < 1 && <h3>There are no shops yet</h3>}
-      {shopsArr.length > 0 && loading && <p>Loading...</p>}
-      {shopsArr.length > 0 && !loading && (
+      {loading && <p>Loading...</p>}
+      {!loading && shopsArr.length === 0 && (
+        <h2>There are no shops in the list yet</h2>
+      )}
+      {!loading && (
         <ul className={css.shopList}>
           {shopsArr.map((shopObj) => (
             <SingleShop key={shopObj.id} obj={shopObj} />
           ))}
         </ul>
       )}
-      {}
     </>
   );
 }

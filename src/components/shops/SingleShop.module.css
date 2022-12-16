@@ -19,19 +19,3 @@
 }
 .shop__year {
 }
-@media screen and (min-width: 426px) {
-  .shop__img {
-    width: 300px;
-    height: 200px;
-  }
-}
-@media screen and (min-width: 726px) {
-  .shopList {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (min-width: 1024px) {
-  .shopList {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
