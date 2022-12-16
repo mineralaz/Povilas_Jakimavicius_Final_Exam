@@ -1,5 +1,4 @@
 import { useFormik } from 'formik';
-import { toast } from 'react-hot-toast';
 import { useHistory } from 'react-router-dom';
 import * as Yup from 'yup';
 import { sendPostRequest } from '../helpers';

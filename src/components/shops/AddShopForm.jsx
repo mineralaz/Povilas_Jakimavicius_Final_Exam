@@ -1,19 +1,15 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { sendPostRequest } from '../helpers';
 
 function AddShopForm(props) {
   const formik = useFormik({
     initialValues: {
       shopName: '',
-      // input - (stringas, minimum 4 simboliai, privalomas laukas )
       town: '',
-      // input - (stringas, minimum 4 simboliai, privalomas laukas )
       startYear: '',
-      // input (skaicius, 4 simboliai, min 1970, max 2022, privalomas laukas)
       description: '',
-      // textarea - (stringas, mažiausiai 6 simboliai privalomas laukas)
-      ImageUrl: '',
-      // input (stringas, min 5, privalomas)
+      imageUrl: '',
     },
     validationSchema: Yup.object().shape({
       shopName: Yup.string()
@@ -33,8 +29,13 @@ function AddShopForm(props) {
         .min(5, 'Too short. Min 5 symbols')
         .required('required field'),
     }),
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log('values ===', values);
+      const url = `${import.meta.env.VITE_REAL_DB_URL}/shops.json`;
+      const [response, error] = await sendPostRequest(values, url);
+      console.log('response ===', response);
+      console.log('error ===', error);
+      formik.resetForm();
     },
   });
   return (

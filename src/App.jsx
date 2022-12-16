@@ -7,6 +7,7 @@ import AddShopPage from './pages/AddShopPage';
 import './App.css';
 import Header from './components/header/Header';
 import ProtectedRoute from './components/ProtectedRoute';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <HomePage />
         </Route>
       </Switch>
+      <Toaster />
     </div>
   );
 }
