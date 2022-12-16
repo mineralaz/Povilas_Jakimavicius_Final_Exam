@@ -14,3 +14,13 @@ export async function sendPostRequest(objToSend, url) {
     return [null, error];
   }
 }
+
+export function shopsObjectsObjToArr(shopsObj) {
+  const shopsArr = [];
+  for (const key in shopsObj) {
+    const value = shopsObj[key];
+    value.id = key;
+    shopsArr.push(value);
+  }
+  return shopsArr;
+}
