@@ -1,9 +1,10 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useAuthCtx } from '../../store/AuthContext';
-import { notification, sendPostRequest } from '../helpers';
+import { sendPostRequest } from '../helpers';
 import { useHistory } from 'react-router-dom';
 import Input from '../UI/Input';
+import { failNotify, successNotify } from '../toasts/toasts';
 
 function LoginAuthForm(props) {
   const ctx = useAuthCtx();
@@ -24,10 +25,10 @@ function LoginAuthForm(props) {
         import.meta.env.VITE_API_KEY
       }`;
       const [response, error] = await sendPostRequest(values, url);
-      if (error) return notification(error.error.message);
+      if (error) return failNotify(error.error.message);
 
       ctx.login(response.idToken);
-      notification('Login success');
+      successNotify('Login success');
       history.push('/');
     },
   });

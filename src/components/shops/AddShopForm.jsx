@@ -1,6 +1,7 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { notification, sendPostRequest } from '../helpers';
+import { sendPostRequest } from '../helpers';
+import { failNotify, successNotify } from '../toasts/toasts';
 import Input from '../UI/Input';
 
 function AddShopForm(props) {
@@ -34,8 +35,8 @@ function AddShopForm(props) {
       console.log('values ===', values);
       const url = `${import.meta.env.VITE_REAL_DB_URL}/shops.json`;
       const [response, error] = await sendPostRequest(values, url);
-      if (error) return notification(error.error.message);
-      notification('Shop was succesfully added');
+      if (error) return failNotify(error.error.message);
+      successNotify('Shop was succesfully added');
       formik.resetForm();
     },
   });

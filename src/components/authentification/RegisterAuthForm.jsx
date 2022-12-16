@@ -1,7 +1,8 @@
 import { useFormik } from 'formik';
 import { useHistory } from 'react-router-dom';
 import * as Yup from 'yup';
-import { notification, sendPostRequest } from '../helpers';
+import { sendPostRequest } from '../helpers';
+import { failNotify, successNotify } from '../toasts/toasts';
 import Input from '../UI/Input';
 
 function RegisterAuthForm(props) {
@@ -23,9 +24,9 @@ function RegisterAuthForm(props) {
       }`;
       const [response, error] = await sendPostRequest(values, url);
 
-      if (error) return notification(error.error.message);
+      if (error) return failNotify(error.error.message);
 
-      notification('Regitered succesfully');
+      successNotify('Regitered succesfully');
       history.push('/login');
     },
   });

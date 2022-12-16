@@ -1,5 +1,3 @@
-import { toast } from 'react-hot-toast';
-
 export async function sendPostRequest(objToSend, url) {
   try {
     const resp = await fetch(url, {
@@ -26,5 +24,3 @@ export function shopsObjectsObjToArr(shopsObj) {
   }
   return shopsArr;
 }
-
-export const notification = (message) => toast(message);
