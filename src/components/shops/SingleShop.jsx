@@ -4,8 +4,8 @@ function SingleShop(props) {
     <li>
       <img src={imageUrl} alt={shopName} />
       <h2>{shopName}</h2>
-      <h3>{town}</h3>
       <p>{description}</p>
+      <p>{town}</p>
       <p>{startYear}</p>
     </li>
   );
