@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useAuthCtx } from '../../store/AuthContext';
 import { shopsObjectsObjToArr } from '../helpers';
 import useFetch from '../hooks/UseFetch';
@@ -12,14 +11,16 @@ function AllShops(props) {
 
   return (
     <>
-      {loading && <p>Loading...</p>}
-      {!loading && (
+      {shopsArr.length < 1 && <h3>There are no shops yet</h3>}
+      {shopsArr.length > 0 && loading && <p>Loading...</p>}
+      {shopsArr.length > 0 && !loading && (
         <ul>
           {shopsArr.map((shopObj) => (
             <SingleShop key={shopObj.id} obj={shopObj} />
           ))}
         </ul>
       )}
+      {}
     </>
   );
 }

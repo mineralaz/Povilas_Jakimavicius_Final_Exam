@@ -6,7 +6,7 @@ function SingleShop(props) {
       <h2>{shopName}</h2>
       <p>{description}</p>
       <p>{town}</p>
-      <p>{startYear}</p>
+      <p>Since {startYear}</p>
     </li>
   );
 }
