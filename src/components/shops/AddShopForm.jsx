@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 import { sendPostRequest } from '../helpers';
 import { failNotify, successNotify } from '../toasts/toasts';
 import Input from '../UI/Input';
+import css from './AddShopForm.module.css';
 
 function AddShopForm(props) {
   const formik = useFormik({
@@ -42,7 +43,7 @@ function AddShopForm(props) {
   });
   return (
     <div>
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={formik.handleSubmit} className={css.addShopForm}>
         <Input
           type="text"
           name="shopName"
@@ -53,26 +54,29 @@ function AddShopForm(props) {
           touched={formik.touched.shopName}
           error={formik.errors.shopName}
         />
-        <Input
-          type="text"
-          name="town"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.town}
-          placeholder="Town"
-          touched={formik.touched.town}
-          error={formik.errors.town}
-        />
-        <Input
-          type="number"
-          name="startYear"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.startYear}
-          placeholder="Start Year"
-          touched={formik.touched.startYear}
-          error={formik.errors.startYear}
-        />
+        <div className={css.twoInpInline}>
+          <Input
+            type="text"
+            name="town"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.town}
+            placeholder="Town"
+            touched={formik.touched.town}
+            error={formik.errors.town}
+          />
+          <Input
+            type="number"
+            name="startYear"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.startYear}
+            placeholder="Start Year"
+            touched={formik.touched.startYear}
+            error={formik.errors.startYear}
+          />
+        </div>
+
         <Input
           textarea
           type="text"

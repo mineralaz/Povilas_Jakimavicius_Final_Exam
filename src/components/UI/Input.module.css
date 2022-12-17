@@ -1,5 +1,12 @@
 .errMsg {
   color: tomato;
   text-align: center;
-  margin-bottom: 0.5rem;
+  font-size: 12px;
+}
+.inpName {
+  margin-bottom: 0.2rem;
+}
+input,
+textarea:focus {
+  outline-color: blueviolet;
 }

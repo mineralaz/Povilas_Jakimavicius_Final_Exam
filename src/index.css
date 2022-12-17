@@ -24,12 +24,9 @@ select {
   padding: 0.3em 0.8em;
   border-radius: 4px;
   border: 1px solid #777;
-  display: block;
-  max-width: 300px;
 }
 textarea {
   min-height: 5rem;
-  min-width: 500px;
   resize: vertical;
 }
 

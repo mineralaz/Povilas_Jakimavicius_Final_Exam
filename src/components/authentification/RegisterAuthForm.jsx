@@ -39,7 +39,7 @@ function RegisterAuthForm(props) {
           name="email"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          placeholder="email"
+          placeholder="Email"
           touched={formik.touched.email}
           error={formik.errors.email}
         />
@@ -48,7 +48,7 @@ function RegisterAuthForm(props) {
           name="password"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          placeholder="password"
+          placeholder="Password"
           touched={formik.touched.password}
           error={formik.errors.password}
         />

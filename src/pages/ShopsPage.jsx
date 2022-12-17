@@ -4,7 +4,8 @@ import PageTitle from '../components/UI/PageTitle';
 function ShopsPage(props) {
   return (
     <div className="container">
-      <PageTitle>Our shops</PageTitle>
+      <PageTitle>Our sponsored shops</PageTitle>
+
       <AllShops />
     </div>
   );
