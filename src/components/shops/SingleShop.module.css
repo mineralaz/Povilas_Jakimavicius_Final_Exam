@@ -1,21 +1,39 @@
 .shop {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 1rem;
   border-radius: 5px;
   background-color: snow;
 }
 .shop__img {
-  width: 300px;
-  height: 200px;
-  align-self: center;
+  width: 250px;
+  height: 140px;
+  margin: 0 auto;
 }
 .shop__name {
-  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
 }
 .shop__desc {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.4rem;
 }
-.shop__town {
-}
+.shop__town,
 .shop__year {
+  color: grey;
+  font-size: 14px;
+}
+
+.shop__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.shop__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
