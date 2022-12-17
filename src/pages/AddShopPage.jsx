@@ -1,9 +1,10 @@
 import AddShopForm from '../components/shops/AddShopForm';
+import PageTitle from '../components/UI/PageTitle';
 
 function AddShopPage(props) {
   return (
     <div className="container">
-      <h2>Add your shop to our list</h2>
+      <PageTitle>Add your shop to our list</PageTitle>
       <AddShopForm />
     </div>
   );

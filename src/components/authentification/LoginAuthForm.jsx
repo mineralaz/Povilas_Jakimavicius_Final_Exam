@@ -35,7 +35,6 @@ function LoginAuthForm(props) {
   });
   return (
     <div className={css.loginForm}>
-      <h2>Login</h2>
       <form onSubmit={formik.handleSubmit}>
         <Input
           type="email"

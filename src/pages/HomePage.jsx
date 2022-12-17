@@ -1,7 +1,9 @@
+import PageTitle from '../components/UI/PageTitle';
+
 function HomePage(props) {
   return (
     <div className="container">
-      <h2>Welcome to our sponsored shops list</h2>
+      <PageTitle>Welcome to our sponsored shops list</PageTitle>
     </div>
   );
 }

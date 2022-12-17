@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import PageTitle from '../components/UI/PageTitle';
 
 function NotAuthorisedPage(props) {
   return (
     <div className="container">
-      <h2>For registered or logged in users only</h2>
+      <PageTitle>For registered or logged in users only</PageTitle>
       <p>
         Register <Link to="/register">Here</Link>
       </p>

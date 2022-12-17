@@ -1,9 +1,10 @@
 import AllShops from '../components/shops/AllShops';
+import PageTitle from '../components/UI/PageTitle';
 
 function ShopsPage(props) {
   return (
     <div className="container">
-      <h2>Our shops</h2>
+      <PageTitle>Our shops</PageTitle>
       <AllShops />
     </div>
   );
