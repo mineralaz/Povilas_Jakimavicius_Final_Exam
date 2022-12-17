@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { sendPostRequest } from '../helpers';
 import { failNotify, successNotify } from '../toasts/toasts';
 import Input from '../UI/Input';
+import css from './RegisterAuthForm.module.css';
 
 function RegisterAuthForm(props) {
   const history = useHistory();
@@ -32,7 +33,7 @@ function RegisterAuthForm(props) {
   });
   return (
     <div>
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={formik.handleSubmit} className={css.registerForm}>
         <Input
           type="email"
           name="email"

@@ -26,7 +26,6 @@ select {
   border: 1px solid #777;
   display: block;
   max-width: 300px;
-  margin-bottom: 0.5rem;
 }
 textarea {
   min-height: 5rem;
