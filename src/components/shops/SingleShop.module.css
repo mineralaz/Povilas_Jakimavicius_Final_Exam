@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem;
+  padding-bottom: 1rem;
   border-radius: 5px;
   background-color: rgb(219, 219, 219);
   transition: 0.3s all ease-in;
@@ -14,18 +14,17 @@
   top: -10px;
 }
 .shop__img {
-  width: 250px;
+  width: 100%;
   height: 140px;
-  margin: 0 auto;
-  border-radius: 5px;
 }
 .shop__name {
-  margin-bottom: 1rem;
+  margin: 1rem;
   font-size: 1.3rem;
   text-align: center;
   color: #333;
 }
 .shop__desc {
+  margin: 1rem 1rem 2rem 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
   line-height: 1.4rem;
@@ -34,16 +33,14 @@
   font-size: 13px;
   letter-spacing: 1px;
 }
-.shop__town,
-.shop__year {
-  color: grey;
-  font-size: 14px;
-}
 
 .shop__bottom {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  color: grey;
+  font-size: 14px;
+  padding: 0 1rem;
 }
 .shop__top {
   display: flex;
