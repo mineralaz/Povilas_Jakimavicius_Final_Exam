@@ -30,7 +30,14 @@ function App() {
           <HomePage />
         </Route>
       </Switch>
-      <Toaster />
+      <Toaster
+        containerStyle={{
+          top: 25,
+          left: 20,
+          bottom: 20,
+          right: 20,
+        }}
+      />
     </div>
   );
 }
