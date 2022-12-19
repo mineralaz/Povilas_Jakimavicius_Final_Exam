@@ -9,6 +9,7 @@
   justify-content: center;
   flex-direction: column;
   color: #fff;
+  text-align: end;
 }
 .addShopInstr h3 {
   margin-bottom: 2rem;

@@ -6,7 +6,7 @@
   align-items: center;
   margin-bottom: 1rem;
   padding: 10px 20px;
-  box-shadow: 4px 0 20px -5px rgb(0 0 0 / 20%);
+  box-shadow: 4px 5px 20px -5px #333;
   z-index: 10;
   background-color: rgb(187, 187, 187);
 }
