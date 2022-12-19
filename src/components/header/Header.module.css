@@ -8,7 +8,7 @@
   padding: 10px 20px;
   box-shadow: 4px 0 20px -5px rgb(0 0 0 / 20%);
   z-index: 10;
-  background-color: darkgrey;
+  background-color: rgb(187, 187, 187);
 }
 .header ul {
   display: flex;

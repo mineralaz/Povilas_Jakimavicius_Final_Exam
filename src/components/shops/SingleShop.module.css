@@ -10,6 +10,7 @@
   width: 250px;
   height: 140px;
   margin: 0 auto;
+  border-radius: 5px;
 }
 .shop__name {
   margin-bottom: 1rem;
@@ -20,6 +21,10 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
   line-height: 1.4rem;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
 }
 .shop__town,
 .shop__year {
