@@ -1,0 +1,39 @@
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 10px 30px;
+  box-shadow: 4px 5px 20px -5px #333;
+  z-index: 10;
+  background-color: rgb(187, 187, 187);
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  gap: 0.7rem;
+}
+.header button {
+  margin-left: 20px;
+}
+.navLink {
+  margin: 0 5px;
+  color: #fff;
+  font-weight: 500;
+}
+.navLink:hover {
+  color: #7971ea;
+}
+.activeNavLink {
+  text-decoration: overline 2px #7971ea;
+}
+.logo {
+  font-size: 1.5rem;
+  color: #7971ea;
+  font-weight: 900;
+  position: relative;
+}

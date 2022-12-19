@@ -1,0 +1,10 @@
+.errMsg {
+  color: tomato;
+  text-align: center;
+  font-size: 12px;
+}
+
+input,
+textarea:focus {
+  outline-color: #7971ea;
+}

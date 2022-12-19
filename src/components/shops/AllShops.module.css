@@ -1,0 +1,11 @@
+.shopList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+.noShops {
+  color: #fff;
+  font-size: 1.5rem;
+}
