@@ -3,10 +3,7 @@
   text-align: center;
   font-size: 12px;
 }
-.inpName {
-  padding-left: 0.2rem;
-  margin-bottom: 0.2rem;
-}
+
 input,
 textarea:focus {
   outline-color: #7971ea;
