@@ -7,7 +7,9 @@ function Header(props) {
   const { userLoggedIn, logout } = useAuthCtx();
   return (
     <header className={css.header}>
-      <Link to="/">Logo</Link>
+      <Link to="/" className={css.logo}>
+        OurShops
+      </Link>
       <nav>
         <ul>
           {!userLoggedIn && (
