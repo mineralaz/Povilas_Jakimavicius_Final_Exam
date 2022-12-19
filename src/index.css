@@ -23,7 +23,7 @@ select {
   font-size: 16px;
   padding: 0.3em 0.8em;
   border-radius: 4px;
-  border: 1px solid #777;
+  border: 1px solid gray;
 }
 textarea {
   min-height: 8rem;
@@ -44,4 +44,7 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+.homepageImg {
+  background-image: url('https://wallpaperaccess.com/full/2483946.jpg');
 }
