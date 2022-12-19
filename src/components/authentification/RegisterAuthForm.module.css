@@ -3,10 +3,34 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  width: 200px;
-  margin: 0 auto;
+  width: 260px;
+  border-radius: 5px;
+  background-color: snow;
+  padding: 15px 30px;
 }
-
+.registerForm h3 {
+  color: #7971ea;
+  margin-bottom: 0.5rem;
+}
 .registerForm input {
   width: 200px;
+}
+.regContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.regDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: end;
+  max-width: 400px;
+}
+.regDesc h4 {
+  color: snow;
+  margin-bottom: 2rem;
+}
+.regDesc p {
+  color: lightgray;
 }

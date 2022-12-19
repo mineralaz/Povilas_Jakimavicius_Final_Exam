@@ -1,10 +1,33 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.loginDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loginDesc h4 {
+  color: snow;
+  margin-bottom: 2rem;
+}
+.loginDesc p {
+  color: lightgray;
+}
 .loginForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  width: 200px;
-  margin: 0 auto;
+  width: 260px;
+  background-color: snow;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+.loginForm h3 {
+  color: #7971ea;
+  margin-bottom: 0.5rem;
 }
 .loginForm input {
   width: 200px;

@@ -4,7 +4,7 @@ import PageTitle from '../components/UI/PageTitle';
 function RegisterPage(props) {
   return (
     <div className="container">
-      <PageTitle>Please register</PageTitle>
+      <PageTitle>Register</PageTitle>
       <RegisterAuthForm />
     </div>
   );

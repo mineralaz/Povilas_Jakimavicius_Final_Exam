@@ -35,8 +35,9 @@ function LoginAuthForm(props) {
     },
   });
   return (
-    <div>
+    <div className={css.loginContainer}>
       <form onSubmit={formik.handleSubmit} className={css.loginForm}>
+        <h3>Login</h3>
         <Input
           type="email"
           name="email"
@@ -57,6 +58,13 @@ function LoginAuthForm(props) {
         />
         <Button type="submit">Login</Button>
       </form>
+      <div className={css.loginDesc}>
+        <h4>Please login</h4>
+        <p>
+          Only by logging in you will be able to see our <br /> sponsored shops
+          or even add yours
+        </p>
+      </div>
     </div>
   );
 }

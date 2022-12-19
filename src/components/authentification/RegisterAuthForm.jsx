@@ -33,8 +33,16 @@ function RegisterAuthForm(props) {
     },
   });
   return (
-    <div>
+    <div className={css.regContainer}>
+      <div className={css.regDesc}>
+        <h4>Please register</h4>
+        <p>
+          Only registered users are able to see our sponsored shops or even add
+          their own shop to be sponsored
+        </p>
+      </div>
       <form onSubmit={formik.handleSubmit} className={css.registerForm}>
+        <h3>Register</h3>
         <Input
           type="email"
           name="email"
