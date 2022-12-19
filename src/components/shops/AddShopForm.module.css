@@ -31,6 +31,7 @@
 .addShopForm h4 {
   color: #7971ea;
   margin-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 .addShopForm input,
 textarea {
