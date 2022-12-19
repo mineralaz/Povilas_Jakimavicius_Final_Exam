@@ -58,9 +58,9 @@ function Header(props) {
               </NavLink>
             </li>
           )}
-          {userLoggedIn && <Button onClick={logout}>Logout</Button>}
         </ul>
       </nav>
+      {userLoggedIn && <Button onClick={logout}>Logout</Button>}
     </header>
   );
 }
