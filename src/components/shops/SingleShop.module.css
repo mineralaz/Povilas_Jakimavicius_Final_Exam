@@ -5,7 +5,7 @@
   justify-content: space-between;
   padding-bottom: 1rem;
   border-radius: 5px;
-  background-color: rgb(219, 219, 219);
+  background-color: snow;
   transition: 0.3s all ease-in;
   top: 0;
 }

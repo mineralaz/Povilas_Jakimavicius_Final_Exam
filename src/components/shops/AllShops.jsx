@@ -11,9 +11,9 @@ function AllShops(props) {
   const shopsArr = shopsObjectsObjToArr(shopsData);
   return (
     <>
-      {loading && <p>Loading...</p>}
+      {loading && <p className={css.noShops}>Loading...</p>}
       {!loading && shopsArr.length === 0 && (
-        <h2>There are no shops in the list yet</h2>
+        <h2 className={css.noShops}>There are no shops in the list yet</h2>
       )}
       {!loading && (
         <ul className={css.shopList}>
