@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useAuthCtx } from '../../store/AuthContext';
+import Button from '../UI/Button';
 import css from './Header.module.css';
 
 function Header(props) {
@@ -55,7 +56,7 @@ function Header(props) {
               </NavLink>
             </li>
           )}
-          {userLoggedIn && <button onClick={logout}>Logout</button>}
+          {userLoggedIn && <Button onClick={logout}>Logout</Button>}
         </ul>
       </nav>
     </header>

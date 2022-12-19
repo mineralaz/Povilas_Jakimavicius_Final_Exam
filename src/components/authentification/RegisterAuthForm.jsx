@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import * as Yup from 'yup';
 import { sendPostRequest } from '../helpers';
 import { failNotify, successNotify } from '../toasts/toasts';
+import Button from '../UI/Button';
 import Input from '../UI/Input';
 import css from './RegisterAuthForm.module.css';
 
@@ -52,7 +53,7 @@ function RegisterAuthForm(props) {
           touched={formik.touched.password}
           error={formik.errors.password}
         />
-        <button type="submit">Register</button>
+        <Button type="submit">Register</Button>
       </form>
     </div>
   );

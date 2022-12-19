@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom';
 import Input from '../UI/Input';
 import { failNotify, successNotify } from '../toasts/toasts';
 import css from './LoginAuthForm.module.css';
+import Button from '../UI/Button';
 
 function LoginAuthForm(props) {
   const ctx = useAuthCtx();
@@ -54,7 +55,7 @@ function LoginAuthForm(props) {
           touched={formik.touched.password}
           error={formik.errors.password}
         />
-        <button type="submit">Login</button>
+        <Button type="submit">Login</Button>
       </form>
     </div>
   );

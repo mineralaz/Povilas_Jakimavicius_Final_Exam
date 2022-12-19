@@ -2,6 +2,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { sendPostRequest } from '../helpers';
 import { failNotify, successNotify } from '../toasts/toasts';
+import Button from '../UI/Button';
 import Input from '../UI/Input';
 import css from './AddShopForm.module.css';
 
@@ -98,7 +99,7 @@ function AddShopForm(props) {
           touched={formik.touched.imageUrl}
           error={formik.errors.imageUrl}
         />
-        <button type="submit">Add Shop</button>
+        <Button type="submit">Add Shop</Button>
       </form>
     </div>
   );
