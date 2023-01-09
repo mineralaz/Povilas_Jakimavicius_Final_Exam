@@ -1,0 +1,13 @@
+.formDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.formDesc h3 {
+  color: #333;
+}
+.formDesc p {
+  color: #444;
+  font-weight: 600;
+}
