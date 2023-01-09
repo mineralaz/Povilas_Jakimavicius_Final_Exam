@@ -1,4 +1,5 @@
 import { useFormik } from 'formik';
+import { useHistory } from 'react-router-dom';
 import * as Yup from 'yup';
 import { sendPostRequest } from '../helpers';
 import { failNotify, successNotify } from '../toasts/toasts';
@@ -7,6 +8,7 @@ import Input from '../UI/Input';
 import css from './AddShopForm.module.css';
 
 function AddShopForm(props) {
+  const history = useHistory();
   const formik = useFormik({
     initialValues: {
       shopName: '',
@@ -37,9 +39,9 @@ function AddShopForm(props) {
       console.log('values ===', values);
       const url = `${import.meta.env.VITE_REAL_DB_URL}/shops.json`;
       const [response, error] = await sendPostRequest(values, url);
-      if (error) return failNotify(error.error.message);
       successNotify('Shop was succesfully added');
       formik.resetForm();
+      setTimeout(() => history.push('/shops'), 1500);
     },
   });
   return (

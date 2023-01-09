@@ -26,10 +26,14 @@ function RegisterAuthForm(props) {
       }`;
       const [response, error] = await sendPostRequest(values, url);
 
-      if (error) return failNotify(error.error.message);
+      if (error) {
+        if ((error.error.message = 'EMAIL_EXISTS'))
+          return failNotify('Email is already in use');
+      }
 
       successNotify('Regitered succesfully');
-      history.push('/login');
+      formik.resetForm();
+      setTimeout(() => history.push('/login'), 1500);
     },
   });
   return (

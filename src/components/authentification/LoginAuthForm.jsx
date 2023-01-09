@@ -27,11 +27,15 @@ function LoginAuthForm(props) {
         import.meta.env.VITE_API_KEY
       }`;
       const [response, error] = await sendPostRequest(values, url);
-      if (error) return failNotify(error.error.message);
+      if (error) {
+        if (error.error.message === 'EMAIL_NOT_FOUND')
+          failNotify('Invalid email or password');
+        else if (error.error.message === 'INVALID_PASSWORD')
+          failNotify('Invalid email or password');
+      }
 
       ctx.login(response.idToken);
-      successNotify('Login success');
-      history.push('/');
+      history.push('/shops');
     },
   });
   return (
