@@ -6,11 +6,6 @@ body {
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: grey;
-  background-image: url('https://wallpaperaccess.com/full/2483946.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position-y: -4rem;
 }
 
 a {
