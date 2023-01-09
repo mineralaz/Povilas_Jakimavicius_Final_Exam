@@ -8,11 +8,9 @@ function Header(props) {
   const { userLoggedIn, logout } = useAuthCtx();
   const [small, setSmall] = useState(false);
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', () => {
-        setSmall(window.pageYOffset > 30);
-      });
-    }
+    window.addEventListener('scroll', () => {
+      setSmall(window.pageYOffset > 30);
+    });
   }, []);
 
   return (
