@@ -3,20 +3,7 @@
   justify-content: center;
   gap: 3rem;
 }
-.addShopInstr {
-  max-width: 600px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: #fff;
-  text-align: end;
-}
-.addShopInstr h3 {
-  margin-bottom: 2rem;
-}
-.addShopInstr p {
-  color: lightgray;
-}
+
 .addShopForm {
   display: flex;
   flex-direction: column;

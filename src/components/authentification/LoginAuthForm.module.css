@@ -3,18 +3,7 @@
   justify-content: center;
   gap: 3rem;
 }
-.loginDesc {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.loginDesc h4 {
-  color: snow;
-  margin-bottom: 2rem;
-}
-.loginDesc p {
-  color: lightgray;
-}
+
 .loginForm {
   display: flex;
   flex-direction: column;

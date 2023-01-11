@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { sendPostRequest } from '../helpers';
 import { failNotify, successNotify } from '../toasts/toasts';
 import Button from '../UI/Button';
+import FormDescription from '../UI/FormDescription';
 import Input from '../UI/Input';
 import css from './RegisterAuthForm.module.css';
 
@@ -38,13 +39,11 @@ function RegisterAuthForm(props) {
   });
   return (
     <div className={css.regContainer}>
-      <div className={css.regDesc}>
-        <h4>Please register</h4>
-        <p>
-          Only registered users are able to see our sponsored shops or even add
-          their own shop to be sponsored
-        </p>
-      </div>
+      <FormDescription formName="Please register" right>
+        Only registered users are able to see our sponsored shops or even add
+        their own shop to be sponsored
+      </FormDescription>
+
       <form onSubmit={formik.handleSubmit} className={css.registerForm}>
         <h3>Register</h3>
         <Input

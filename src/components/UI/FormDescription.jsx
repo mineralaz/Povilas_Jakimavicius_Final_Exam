@@ -2,8 +2,12 @@ import css from './FormDescription.module.css';
 
 function FormDescription(props) {
   return (
-    <div className={css.formDesc}>
-      <h3>{props.formAction}</h3>
+    <div
+      className={
+        props.right ? `${css.formDesc} ${css.alignRight}` : css.formDesc
+      }
+    >
+      <h3>{props.formName}</h3>
       <p>{props.children}</p>
     </div>
   );

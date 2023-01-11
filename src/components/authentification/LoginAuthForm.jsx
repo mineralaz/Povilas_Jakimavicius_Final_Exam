@@ -7,6 +7,7 @@ import Input from '../UI/Input';
 import { failNotify, successNotify } from '../toasts/toasts';
 import css from './LoginAuthForm.module.css';
 import Button from '../UI/Button';
+import FormDescription from '../UI/FormDescription';
 
 function LoginAuthForm(props) {
   const ctx = useAuthCtx();
@@ -62,13 +63,10 @@ function LoginAuthForm(props) {
         />
         <Button type="submit">Login</Button>
       </form>
-      <div className={css.loginDesc}>
-        <h4>Please login</h4>
-        <p>
-          Only by logging in you will be able to see our <br /> sponsored shops
-          or even add yours
-        </p>
-      </div>
+      <FormDescription formName="Please login">
+        Only by logging in you will be able to see our sponsored shops or even
+        add yours
+      </FormDescription>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { sendPostRequest } from '../helpers';
 import { failNotify, successNotify } from '../toasts/toasts';
 import Button from '../UI/Button';
+import FormDescription from '../UI/FormDescription';
 import Input from '../UI/Input';
 import css from './AddShopForm.module.css';
 
@@ -46,10 +47,9 @@ function AddShopForm(props) {
   });
   return (
     <div className={css.addShopFormContainer}>
-      <div className={css.addShopInstr}>
-        <h3>Feel free to add your shop.</h3>
-        <p>By doing it you will end up getting even more customers</p>
-      </div>
+      <FormDescription formName="Feel free to add your shop" right>
+        By doing it you will end up getting even more customers
+      </FormDescription>
       <form onSubmit={formik.handleSubmit} className={css.addShopForm}>
         <h4>Your shop</h4>
         <Input
